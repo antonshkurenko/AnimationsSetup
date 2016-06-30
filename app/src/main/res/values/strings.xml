@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">AnimationsSetup</string>
+
+  <string name="to_be_or_not_to_be">To be or not to be</string>
+  <string name="random_animation_on_click">Random animation on click</string>
+
+  <string name="transition_name_android">android_image</string>
+
+  <string name="small_centered_icon">Small centered icon</string>
+  <string name="big_corner_icon">Big corner icon</string>
+</resources>

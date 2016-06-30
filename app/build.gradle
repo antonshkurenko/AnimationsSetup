@@ -1,0 +1,48 @@
+buildscript {
+
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath "com.neenbedankt.gradle.plugins:android-apt:1.8"
+  }
+}
+
+apply plugin: "com.android.application"
+apply plugin: "com.neenbedankt.android-apt"
+
+android {
+  compileSdkVersion 24
+  buildToolsVersion "24.0.0"
+
+  defaultConfig {
+    applicationId "io.github.tonyshkurenko.animationssetup"
+    minSdkVersion 15
+    targetSdkVersion 24
+    versionCode 1
+    versionName "1.0"
+
+    // for using support vector
+    vectorDrawables.useSupportLibrary = true
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+    }
+  }
+}
+
+dependencies {
+
+  // android
+  def androidVer = "24.0.0"
+  compile "com.android.support:appcompat-v7:${androidVer}"
+  compile "com.android.support:support-v4:${androidVer}"
+
+  // butterknife
+  def butterknifeVer = "8.1.0"
+  compile "com.jakewharton:butterknife:${butterknifeVer}"
+  apt "com.jakewharton:butterknife-compiler:${butterknifeVer}"
+}
